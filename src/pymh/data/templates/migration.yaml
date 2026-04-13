@@ -1,0 +1,25 @@
+plan:
+  goal: "(filled by plan subagent based on task goal)"
+  steps:
+    - id: t1
+      action: "Research migration path — find official guides, breaking changes, and known issues for the target version or tool"
+      success_criteria: "Migration guide identified with clear steps and known pitfalls"
+      retry_strategy: "try a different approach"
+    - id: t2
+      action: "Plan the migration — identify all files that need changes, map dependencies, and determine migration order"
+      success_criteria: "Complete migration plan with ordered file list and dependency map"
+      retry_strategy: "try a different approach"
+    - id: t3a
+      action: "Migrate primary configuration files and entry points"
+      success_criteria: "Config files updated and valid"
+      can_parallel_with: [t3b]
+      retry_strategy: "proceed with what we have"
+    - id: t3b
+      action: "Migrate dependencies, package configuration, and build scripts"
+      success_criteria: "Dependencies resolved and installable"
+      can_parallel_with: [t3a]
+      retry_strategy: "proceed with what we have"
+    - id: t4
+      action: "Verify migration — run build, execute tests, and validate all functionality works with the new setup"
+      success_criteria: "Build succeeds and all tests pass"
+      retry_strategy: "stop and escalate"

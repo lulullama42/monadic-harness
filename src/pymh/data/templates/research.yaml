@@ -1,0 +1,19 @@
+plan:
+  goal: "(filled by plan subagent based on task goal)"
+  steps:
+    - id: t1
+      action: "Search and gather relevant sources — identify documentation, code examples, reference material, and prior art"
+      success_criteria: "Comprehensive source list with key findings from each"
+      retry_strategy: "try a different approach"
+    - id: t2
+      action: "Evaluate source quality and extract key information — assess reliability, cross-reference claims, and organize findings"
+      success_criteria: "Structured notes with assessed reliability for each source"
+      retry_strategy: "try a different approach"
+    - id: t3
+      action: "Synthesize findings into a coherent analysis or deliverable that addresses the original goal"
+      success_criteria: "Clear, well-structured output with evidence-backed conclusions"
+      retry_strategy: "proceed with what we have"
+    - id: t4
+      action: "Verify completeness — check for gaps, missing perspectives, contradictions, and accuracy"
+      success_criteria: "All aspects of the goal addressed with supporting evidence"
+      retry_strategy: "stop and escalate"

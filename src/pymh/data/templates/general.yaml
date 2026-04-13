@@ -1,0 +1,15 @@
+plan:
+  goal: "(filled by plan subagent based on task goal)"
+  steps:
+    - id: t1
+      action: "Analyze the current state — understand the codebase, identify relevant files, and gather context needed to accomplish the goal"
+      success_criteria: "Clear understanding of what needs to change and where"
+      retry_strategy: "try a different approach"
+    - id: t2
+      action: "Execute the primary changes needed to accomplish the goal"
+      success_criteria: "All planned changes implemented and working"
+      retry_strategy: "try a different approach"
+    - id: t3
+      action: "Verify the changes work correctly — run tests, check build, validate behavior"
+      success_criteria: "All tests pass and functionality verified"
+      retry_strategy: "stop and escalate"

@@ -1,0 +1,11 @@
+plan:
+  goal: "Cycle test"
+  steps:
+    - id: t1
+      action: "First step"
+      can_parallel_with: [t2]
+    - id: t2
+      action: "Second step"
+      can_parallel_with: [t1]
+    - id: t3
+      action: "Third step"

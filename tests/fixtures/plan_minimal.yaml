@@ -1,0 +1,5 @@
+plan:
+  goal: "Fix typo in README"
+  steps:
+    - id: t1
+      action: "Fix the typo in README.md line 42"

@@ -1,0 +1,21 @@
+plan:
+  goal: "Add authentication with tests"
+  steps:
+    - id: t1
+      action: "Design auth schema and create database migration"
+      success_criteria: "Migration runs successfully"
+      retry_strategy: "try a different approach"
+    - id: t2a
+      action: "Implement login endpoint"
+      success_criteria: "POST /login returns JWT on valid credentials"
+      can_parallel_with: [t2b]
+      retry_strategy: "proceed with what we have"
+    - id: t2b
+      action: "Implement registration endpoint"
+      success_criteria: "POST /register creates user"
+      can_parallel_with: [t2a]
+      retry_strategy: "proceed with what we have"
+    - id: t3
+      action: "Write integration tests for auth endpoints"
+      success_criteria: "All auth tests pass"
+      retry_strategy: "stop and escalate"

@@ -1,0 +1,7 @@
+plan:
+  goal: "Duplicate IDs"
+  steps:
+    - id: t1
+      action: "First step"
+    - id: t1
+      action: "Duplicate step"

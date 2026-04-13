@@ -1,0 +1,15 @@
+plan:
+  goal: "Migrate webpack config to vite"
+  steps:
+    - id: t1
+      action: "Analyze current webpack configuration and list all plugins/loaders"
+      success_criteria: "Complete list of webpack plugins and their purposes"
+      retry_strategy: "try a different approach"
+    - id: t2
+      action: "Create vite.config.ts with equivalent plugin setup"
+      success_criteria: "vite.config.ts exists and passes type check"
+      retry_strategy: "proceed with what we have"
+    - id: t3
+      action: "Update package.json scripts and dependencies"
+      success_criteria: "npm install succeeds and dev server starts"
+      retry_strategy: "stop and escalate"
